@@ -1,0 +1,77 @@
+# GitHub Pages Configuration for GRPO Healthcare AI
+
+# Site settings
+title: "GRPO Healthcare AI"
+description: "Group Robust Policy Optimization for Ethical Medical Resource Allocation - demonstrating 25% fairness improvement with statistical rigor"
+baseurl: "/reinforcement-learning-grpo"
+url: "https://sakeeb91.github.io"
+
+# Repository info
+repository: "Sakeeb91/reinforcement-learning-grpo"
+
+# Author information
+author:
+  name: "Sakeeb Rahman"
+  email: "rahman.sakeeb@gmail.com"
+  github: "Sakeeb91"
+
+# SEO and social
+twitter:
+  username: sakeeb91
+  card: summary_large_image
+
+logo: /assets/images/logo.png
+
+social:
+  name: Sakeeb Rahman
+  links:
+    - https://github.com/Sakeeb91
+    - https://linkedin.com/in/sakeeb-rahman
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections for documentation
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Technical Report"
+    url: "/technical-report/"
+  - title: "Methodology"
+    url: "/methodology/"
+  - title: "Results"
+    url: "/results/"
+  - title: "GitHub"
+    url: "https://github.com/Sakeeb91/reinforcement-learning-grpo"
+    external: true
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - README.md
