@@ -80,6 +80,28 @@ GRPO extends PPO by incorporating group robustness into the policy optimization 
 ## Examples
 
 - `examples/train_cartpole.py`: CartPole training with position-based groups
+- `examples/hospital_scheduling.py`: **Healthcare resource allocation with parallel training** - Demonstrates fair patient treatment across demographics
+
+### Healthcare Application
+
+The healthcare example showcases GRPO applied to hospital resource allocation, addressing real-world AI fairness challenges:
+
+```bash
+python examples/hospital_scheduling.py
+```
+
+**Key Features:**
+- **Realistic Hospital Simulation**: Patient arrivals, resource constraints, treatment protocols
+- **Demographic Fairness**: Ensures equitable treatment across age groups (pediatric, adult, elderly)
+- **Parallel Training**: Multiple agents training on different hospital scenarios simultaneously
+- **Comprehensive Analysis**: Fairness metrics, statistical significance testing, visualizations
+- **Multiple Scenarios**: Urban hospital, rural hospital, pediatric hospital, emergency surge conditions
+
+**Recruiter Appeal:**
+- Demonstrates AI ethics and bias mitigation in critical healthcare applications
+- Shows understanding of regulatory compliance and fairness requirements
+- Combines technical ML expertise with healthcare domain knowledge
+- Addresses real-world problems with measurable social impact
 
 ## License
 
