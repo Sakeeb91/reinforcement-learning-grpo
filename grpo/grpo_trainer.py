@@ -35,7 +35,13 @@ class GRPOTrainer:
     
     def train_episode(self, episode: int) -> Dict[str, float]:
         """Train for one episode."""
-        state = self.env.reset()
+        # Handle both old and new gym API
+        reset_result = self.env.reset()
+        if isinstance(reset_result, tuple):
+            state, _ = reset_result
+        else:
+            state = reset_result
+            
         episode_reward = 0
         episode_length = 0
         
@@ -47,7 +53,12 @@ class GRPOTrainer:
             action, log_prob = self.agent.select_action(state, group_id)
             
             # Take step in environment
-            next_state, reward, done, _ = self.env.step(action)
+            step_result = self.env.step(action)
+            if len(step_result) == 4:
+                next_state, reward, done, _ = step_result
+            else:
+                next_state, reward, terminated, truncated, _ = step_result
+                done = terminated or truncated
             
             # Store experience
             self.agent.store_reward(reward, done)
@@ -110,7 +121,13 @@ class GRPOTrainer:
         total_reward = 0
         
         for _ in range(num_episodes):
-            state = self.env.reset()
+            # Handle both old and new gym API
+            reset_result = self.env.reset()
+            if isinstance(reset_result, tuple):
+                state, _ = reset_result
+            else:
+                state = reset_result
+                
             episode_reward = 0
             
             for step in range(self.max_episode_steps):
@@ -119,7 +136,14 @@ class GRPOTrainer:
                 
                 # Use deterministic action selection for evaluation
                 action, _ = self.agent.select_action(state, group_id=0)
-                state, reward, done, _ = self.env.step(action)
+                
+                step_result = self.env.step(action)
+                if len(step_result) == 4:
+                    state, reward, done, _ = step_result
+                else:
+                    state, reward, terminated, truncated, _ = step_result
+                    done = terminated or truncated
+                    
                 episode_reward += reward
                 
                 if done:

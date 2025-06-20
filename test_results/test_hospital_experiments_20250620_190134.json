@@ -1,0 +1,74 @@
+[
+  {
+    "experiment_id": "test_exp_01_urban_hospital_w0.1",
+    "scenario": "urban_hospital",
+    "robustness_weight": 0.1,
+    "eval_reward_mean": -3766.2745047746275,
+    "eval_reward_std": 420.9838623297475,
+    "eval_fairness_mean": 4.1769360031427,
+    "eval_fairness_std": 1.216295011902032,
+    "final_training_reward_mean": -3714.5125296787182,
+    "final_training_fairness_mean": 3.449010923139924,
+    "timestamp": "2025-06-20T19:01:20.981639"
+  },
+  {
+    "experiment_id": "test_exp_02_urban_hospital_w0.3",
+    "scenario": "urban_hospital",
+    "robustness_weight": 0.3,
+    "eval_reward_mean": -3777.1767878024343,
+    "eval_reward_std": 495.4594879507831,
+    "eval_fairness_mean": 4.396331360994224,
+    "eval_fairness_std": 1.2304792957833255,
+    "final_training_reward_mean": -3679.589601374889,
+    "final_training_fairness_mean": 3.324590450999055,
+    "timestamp": "2025-06-20T19:01:23.708300"
+  },
+  {
+    "experiment_id": "test_exp_03_urban_hospital_w0.5",
+    "scenario": "urban_hospital",
+    "robustness_weight": 0.5,
+    "eval_reward_mean": -3670.435004098485,
+    "eval_reward_std": 208.1471527351003,
+    "eval_fairness_mean": 3.2205706325027896,
+    "eval_fairness_std": 0.8563862044981555,
+    "final_training_reward_mean": -3643.0030304042643,
+    "final_training_fairness_mean": 3.7112491455328263,
+    "timestamp": "2025-06-20T19:01:26.459905"
+  },
+  {
+    "experiment_id": "test_exp_04_rural_hospital_w0.1",
+    "scenario": "rural_hospital",
+    "robustness_weight": 0.1,
+    "eval_reward_mean": -2608.306296278877,
+    "eval_reward_std": 242.12146569831336,
+    "eval_fairness_mean": 2.530519836070976,
+    "eval_fairness_std": 0.9792961420093058,
+    "final_training_reward_mean": -2842.1340905892607,
+    "final_training_fairness_mean": 2.707946256629362,
+    "timestamp": "2025-06-20T19:01:29.104478"
+  },
+  {
+    "experiment_id": "test_exp_05_rural_hospital_w0.3",
+    "scenario": "rural_hospital",
+    "robustness_weight": 0.3,
+    "eval_reward_mean": -3317.9886999932996,
+    "eval_reward_std": 279.72510930829617,
+    "eval_fairness_mean": 3.5186391770249386,
+    "eval_fairness_std": 1.6808581816281414,
+    "final_training_reward_mean": -3310.5112990139,
+    "final_training_fairness_mean": 2.987608501079197,
+    "timestamp": "2025-06-20T19:01:31.730939"
+  },
+  {
+    "experiment_id": "test_exp_06_rural_hospital_w0.5",
+    "scenario": "rural_hospital",
+    "robustness_weight": 0.5,
+    "eval_reward_mean": -2518.3464015553736,
+    "eval_reward_std": 368.9110223805376,
+    "eval_fairness_mean": 2.859165552172153,
+    "eval_fairness_std": 0.9928109939898214,
+    "final_training_reward_mean": -2556.1158306569837,
+    "final_training_fairness_mean": 2.5144163161865443,
+    "timestamp": "2025-06-20T19:01:34.372476"
+  }
+]

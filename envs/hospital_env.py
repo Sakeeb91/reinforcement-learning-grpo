@@ -1,4 +1,4 @@
-import gym
+import gymnasium as gym
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
@@ -48,6 +48,11 @@ class HospitalResources:
     available_staff: int
     equipment_units: int
     available_equipment: int
+    
+    @property
+    def total_equipment(self) -> int:
+        """Alias for compatibility."""
+        return self.equipment_units
     
     def can_allocate(self, beds_needed: int = 1, staff_needed: int = 1, equipment_needed: int = 0) -> bool:
         """Check if resources can be allocated."""
@@ -189,11 +194,11 @@ class HospitalEnv(gym.Env):
         # Time-based arrival rate (more patients during certain hours)
         hour_of_day = (self.current_step % 24)
         if 8 <= hour_of_day <= 18:  # Busy hours
-            arrival_rate = random.poisson(2)
+            arrival_rate = np.random.poisson(2)
         elif 20 <= hour_of_day <= 23 or 0 <= hour_of_day <= 6:  # Night shift
-            arrival_rate = random.poisson(1)
+            arrival_rate = np.random.poisson(1)
         else:  # Moderate hours
-            arrival_rate = random.poisson(1.5)
+            arrival_rate = int(np.random.poisson(1.5))
         
         arrival_rate = min(arrival_rate, self.max_patients_per_step)
         
