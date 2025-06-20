@@ -8,6 +8,12 @@
 
 A comprehensive, production-ready implementation of **Group Robust Policy Optimization (GRPO)** demonstrating ethical AI principles in healthcare resource allocation. This project showcases advanced ML techniques, statistical rigor, and real-world business impact with **25% fairness improvement** while maintaining **98% operational efficiency**.
 
+## 📊 Project Overview
+
+![GRPO Healthcare Analysis Dashboard](analysis/publication_outputs/comprehensive_dashboard.png)
+
+*Comprehensive analysis dashboard showing training progress, fairness-performance trade-offs, demographic equity analysis, and resource utilization across multiple hospital scenarios.*
+
 ## 🎯 Project Impact
 
 - **📈 Measurable Fairness**: 25% improvement in demographic equity (p < 0.001)
@@ -171,6 +177,11 @@ This project includes comprehensive documentation designed for different audienc
 - **[analysis/](./analysis/)** - Publication-quality visualizations and fairness metrics
 
 ### 📈 Key Results at a Glance
+
+![Fairness vs Performance Analysis](analysis/publication_outputs/fairness_analysis.png)
+
+*Statistical analysis showing GRPO's superior fairness-performance trade-offs compared to standard PPO across multiple hospital scenarios.*
+
 - **Fairness Improvement**: 25.3% average improvement (95% CI: [23.1%, 27.5%])
 - **Statistical Significance**: p < 0.001 with large effect sizes (Cohen's d > 0.8)
 - **Efficiency Retention**: 98.2% operational efficiency maintained
